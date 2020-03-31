@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  vars:
+    pip_install_packages:
+      - name: docker
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+
+  roles:
+    - geerlingguy.pip
+    - geerlingguy.docker
